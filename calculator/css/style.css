@@ -1,0 +1,63 @@
+:root {
+  --black: #000000;
+  --orange: #EFA43E;
+  --white: #FDFDFD;
+  --light-black: #333333;
+  --gray: #A5A5A5;
+  --box-size: 1.5rem /* 75/50 */;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: var(--black);
+  color: var(--white);
+  overflow: hidden;
+}
+.header {
+  padding: 0.3rem /* 15/50 */;
+  place-self: end;
+  font-size: 0.64rem /* 32/50 */;
+  width: 100%;
+  direction: rtl;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 30vh 1fr;
+}
+.container .content {
+  display: grid;
+  grid-template-columns: repeat(4, var(--box-size));
+  gap: 0.3rem /* 15/50 */;
+  margin: auto;
+}
+.container .content > button {
+  width: var(--box-size);
+  height: var(--box-size);
+  line-height: var(--box-size);
+  border-radius: 100%;
+  border: 1px solid transparent;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-size: 0.56rem /* 28/50 */;
+  background: var(--light-black);
+  color: var(--white);
+}
+.container .content .key-0 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: auto;
+  height: auto;
+  border-radius: calc(var(--box-size) / 2);
+}
+.container .content .gray-bg {
+  background: var(--gray);
+  color: var(--black);
+}
+.container .content .operator {
+  background: var(--orange);
+}
