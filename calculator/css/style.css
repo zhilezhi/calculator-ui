@@ -13,7 +13,7 @@
 body {
   background: var(--black);
   color: var(--white);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .header {
   padding: 0.3rem /* 15/50 */;
@@ -26,15 +26,17 @@ body {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-rows: 30vh 1fr;
+  grid-template-rows: repeat(2, 1fr);
 }
 .container .content {
   display: grid;
   grid-template-columns: repeat(4, var(--box-size));
   gap: 0.3rem /* 15/50 */;
   margin: auto;
+  padding-bottom: 1rem /* 50/50 */;
 }
-.container .content > button {
+.container .content button,
+.container .content .key-0 {
   width: var(--box-size);
   height: var(--box-size);
   line-height: var(--box-size);
